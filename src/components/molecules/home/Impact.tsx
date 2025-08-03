@@ -41,7 +41,7 @@ const Impact = () => {
 								<path d="M4.82067 18.6667V13.3333H1.33333V26.6667H22.6667V13.3333H9.33333V12H24V28H0V12H4.82067V4H13.4873V8.82067H6.154V18.6667H4.82067Z" fill="#E64C27"/>
 								</g>
 							</svg>
-							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.08em] text-left'>
+							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.04em] text-left'>
 								40<span className='text-gradient-hero text-[48px] md:text-[80px] font-normal ml-4'>+</span>
 							</h3>
 							<h4 className='text-[#9CA3AF] md:text-[24px] tracking-[0.02em] text-left mb-16'>
@@ -60,7 +60,7 @@ const Impact = () => {
 							</g>
 							</svg>
 
-							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.08em] text-left'>
+							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.04em] text-left'>
 								60<span className='text-gradient-hero text-[48px] md:text-[80px] font-normal ml-4'>%</span>
 							</h3>
 							<h4 className='text-[#9CA3AF] md:text-[24px] tracking-[0.02em] text-left mb-16'>
@@ -80,7 +80,7 @@ const Impact = () => {
 							</g>
 							</svg>
 
-							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.08em] text-left'>
+							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.04em] text-left'>
 								50<span className='text-gradient-hero text-[48px] md:text-[80px] font-normal ml-4'>%</span>
 							</h3>
 							<h4 className='text-[#9CA3AF] md:text-[24px] tracking-[0.02em] text-left mb-16'>
@@ -99,8 +99,8 @@ const Impact = () => {
 							</g>
 							</svg>
 
-							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.08em] text-left'>
-								200<span className='text-gradient-hero text-[48px] md:text-[80px] font-normal ml-4'>+</span>
+							<h3 className='text-white text-gradient-hero text-[48px] md:text-[120px] font-light -tracking-[0.04em] text-left'>
+								200<span className='text-gradient-hero text-[48px] md:text-[80px] font-normal ml-4'>%</span>
 							</h3>
 							<h4 className='text-[#9CA3AF] md:text-[24px] tracking-[0.02em] text-left mb-16'>
 								New user<br />
@@ -129,7 +129,7 @@ const Impact = () => {
 							Projects<br />
 							delivered
 						</h4>
-						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.08em] text-left'>
+						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.04em] text-left'>
 							40<span className='text-gradient-hero text-[80px] font-normal ml-4'>+</span>
 						</h3>
 					</motion.div>
@@ -147,7 +147,7 @@ const Impact = () => {
 							Higher<br />
 							conversion rate
 						</h4>
-						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.08em] text-left'>
+						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.04em] text-left'>
 							50<span className='text-gradient-hero text-[80px] font-normal ml-4'>%</span>
 						</h3>
 					</motion.div>
@@ -165,7 +165,7 @@ const Impact = () => {
 							Higher<br />
 							efficiency
 						</h4>
-						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.08em] text-left'>
+						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.04em] text-left'>
 							60<span className='text-gradient-hero text-[80px] font-normal ml-4'>%</span>
 						</h3>
 					</motion.div>
@@ -183,8 +183,8 @@ const Impact = () => {
 							New user<br />
 							Aquisition
 						</h4>
-						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.08em] text-left'>
-							200<span className='text-gradient-hero text-[80px] font-normal ml-4'>+</span>
+						<h3 className='text-white text-gradient-hero text-[120px] font-light -tracking-[0.04em] text-left'>
+							200<span className='text-gradient-hero text-[80px] font-normal ml-4'>%</span>
 						</h3>
 					</motion.div>
 				</motion.div>
