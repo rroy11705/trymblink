@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PageSource {
+  HOME
+  CONTACT
+  ABOUT_US
+  SERVICES
+  PROJECTS
+}
+
+model Contact {
+  id          Int        @id @default(autoincrement())
+  name        String
+  email       String
+  countryCode String
+  phone       String
+  message     String
+  pageSource  PageSource @default(HOME)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@map("contacts")
+}
+
+model Newsletter {
+  id                Int      @id @default(autoincrement())
+  email             String   @unique
+  isActive          Boolean  @default(true)
+  unsubscribeToken  String   @unique @default(cuid())
+  subscribedAt      DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@map("newsletter_subscriptions")
+  @@index([email])
+  @@index([isActive])
+}

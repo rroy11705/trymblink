@@ -13,14 +13,39 @@ const HowWeHelp = () => {
     <motion.section 
       ref={ref}
       id='how-we-help' 
-      className="relative w-full aspect-[1440/978] overflow-hidden"
+      className="relative w-full overflow-hidden px-6 md:px-15 py-15"
       initial="hidden"
       animate={animate}
       variants={containerVariants}
     >
-			<div className='w-full h-full flex items-end justify-end'>
+			<div className='w-full flex flex-col md:flex-row items-center justify-between gap-8'>
+        <motion.div 
+          className='w-full md:w-[45%] flex flex-col items-start justify-center gap-16 md:gap-30'
+          variants={slideInLeftVariants}
+        >
+          <div className='flex flex-col gap-10'>
+            <motion.h6
+              className='text-[#E64C27] text-[20px] md:text-[30px] leading-[100%] -tracking-[0.03em] font-medium text-left'
+            >
+              Mission
+            </motion.h6>
+            <motion.h4 
+              className='text-[#B3B3B3] text-gradient-hero text-[50px] md:text-[80px] leading-[100%] -tracking-[0.02em] font-medium text-left'
+              variants={textRevealVariants}
+            >
+              How we help<br />
+              our partners
+            </motion.h4>
+          </div>
+					<motion.p 
+            className='text-white text-[20px] md:text-[30px] leading-[140%] -tracking-[0.02em] text-left'
+            variants={textRevealVariants}
+          >
+						We design that solves, strategy that sticks, we held hand of businesses in every stage - from discovery to execution, from GTM to sales.
+					</motion.p>
+				</motion.div>
 				<motion.div 
-          className='relative w-[70%] aspect-[1014/882]'
+          className='relative w-full md:w-[45%] aspect-[650/650]'
           variants={slideInRightVariants}
         >
 					<Image
@@ -30,24 +55,7 @@ const HowWeHelp = () => {
 						priority
 					/>
 				</motion.div>
-				<motion.div 
-          className='absolute left-15 bottom-30 w-135 h-152 bg-black pr-20 flex flex-col items-center justify-center gap-30'
-          variants={slideInLeftVariants}
-        >
-					<motion.h4 
-            className='text-[#B3B3B3] text-gradient-hero text-[80px] leading-[100%] -tracking-[0.02em] font-medium text-left'
-            variants={textRevealVariants}
-          >
-						How we help<br />
-						our partners
-					</motion.h4>
-					<motion.p 
-            className='text-white text-[30px] leading-[140%] -tracking-[0.02em] text-left'
-            variants={textRevealVariants}
-          >
-						We design that solves, strategy that sticks, we held hand of businesses in every stage - from discovery to execution, from GTM to sales.
-					</motion.p>
-				</motion.div>
+				
 			</div>
     </motion.section>
   )

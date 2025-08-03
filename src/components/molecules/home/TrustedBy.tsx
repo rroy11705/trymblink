@@ -80,10 +80,10 @@ const TrustedBy = () => {
       variants={containerVariants}
     >
       <motion.div 
-        className="container mx-auto px-4 mb-20"
+        className="container mx-auto px-4 mb-10"
         variants={fadeInVariants}
       >
-        <h2 className="text-white text-5xl md:text-7xl lg:text-8xl font-medium text-center">
+        <h2 className="text-white text-[30px] font-medium text-center">
           Trusted by
         </h2>
       </motion.div>
@@ -99,7 +99,7 @@ const TrustedBy = () => {
               {topRowLogos.map((logo) => (
                 <div
                   key={`top-${logo.name}`}
-                  className="embla__slide w-100 aspect-[395/264]"
+                  className="embla__slide w-30 md:w-100 aspect-[395/264]"
                 >
                   <Image
                     src={logo.src}
@@ -124,7 +124,7 @@ const TrustedBy = () => {
               {bottomRowLogos.map((logo) => (
                 <div
                   key={`bottom-${logo.name}`}
-                  className="embla__slide w-100 aspect-[395/264]"
+                  className="embla__slide w-30 md:w-100 aspect-[395/264]"
                 >
                   <Image
                     src={logo.src}

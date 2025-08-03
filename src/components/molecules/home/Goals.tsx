@@ -10,35 +10,45 @@ const Goals = () => {
   const { ref, animate } = useScrollAnimation()
 
   return (
-    <motion.section 
-      ref={ref}
-      id="vision" 
-      className='relative w-full aspect-[1440/1159] bg-white overflow-hidden'
-      initial="hidden"
-      animate={animate}
-      variants={containerVariants}
-    >
-			<motion.div 
-        className="absolute inset-0 z-10"
-        variants={imageRevealVariants}
+    <>
+      <section className='md:hidden h-11 bg-transparent' />
+      <motion.section 
+        ref={ref}
+        id="vision" 
+        className='relative gradient-goals w-full aspect-[390/425] md:aspect-[1440/1159] bg-white overflow-hidden'
+        initial="hidden"
+        animate={animate}
+        variants={containerVariants}
       >
-        <Image
-          src="/images/backgrounds/goals.png"
-          alt="Your Success Our Responsibility"
-          fill
-          priority
-        />
-      </motion.div>
-			<div className="relative py-75 px-15 flex items-center justify-between flex-wrap">
-				<motion.h3 
-          className="w-full text-[#7A7A7A] text-gradient-goals text-[110px] leading-[98%] font-medium text-center"
-          variants={textRevealVariants}
+        <motion.div 
+          className="absolute inset-0 z-10"
+          variants={imageRevealVariants}
         >
-					Where your<br />
-					company can be reached
-				</motion.h3>
-			</div>
-    </motion.section>
+          <Image
+            src="/images/backgrounds/goals.png"
+            alt="Your Success Our Responsibility"
+            fill
+            className="hidden md:block"
+            priority
+          />
+          <Image
+            src="/images/backgrounds/goals-mobile.png"
+            alt="Your Success Our Responsibility"
+            fill
+            className='object-cover block md:hidden'
+            priority
+          />
+        </motion.div>
+        <div className="relative py-60 md:py-78 md:px-15 flex items-center justify-between flex-wrap">
+          <motion.h3 
+            className="w-full text-white text-[32px] md:text-[110px] leading-[98%] font-medium text-center"
+            variants={textRevealVariants}
+          >
+            This is you with Us
+          </motion.h3>
+        </div>
+      </motion.section>
+    </>
   )
 }
 
