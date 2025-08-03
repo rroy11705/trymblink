@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <motion.section 
       id='hero-home' 
-      className='relative w-full min-h-175 md:min-h-160 flex flex-col items-center justify-center overflow-hidden pt-22 px-6 sm:p-0'
+      className='relative w-full min-h-175 md:min-h-160 flex flex-colð overflow-hidden pt-72 px-6 sm:p-0'
       initial="hidden"
       animate="visible"
       variants={staggeredTextVariants}
