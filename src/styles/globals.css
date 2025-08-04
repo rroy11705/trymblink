@@ -108,7 +108,7 @@ body {
 
 
 .text-gradient-hero {
-  background: linear-gradient(190.36deg, #ECECEC -4.71%, #999999 196.46%);
+  background: linear-gradient(190deg, #ECECEC -4.71%, #999999 196.46%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

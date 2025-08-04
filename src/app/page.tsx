@@ -1,5 +1,5 @@
 import Footer from "@/components/layout/Footer";
-import Contact from "@/components/molecules/home/Contact";
+import Contact from "@/components/molecules/common/Contact";
 import Goals from "@/components/molecules/home/Goals";
 import Hero from "@/components/molecules/home/Hero";
 import HowWeHelp from "@/components/molecules/home/HowWeHelp";

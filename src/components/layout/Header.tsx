@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { headerVariants, fadeInVariants, navLinkVariants, navItemVariants } from '../../lib/animations'
 
@@ -23,6 +24,12 @@ const navigationItems: NavigationItem[] = [
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+	const pathname = usePathname()
+
+	const isActive = useCallback((href: string) => {
+		if (href === '/') return pathname === '/'
+		return pathname.startsWith(href)
+	}, [pathname])
 
 	const handleScroll = useCallback(() => {
 		if (typeof window !== 'undefined' && window.scrollY >= 150) {
@@ -85,7 +92,7 @@ const Header = () => {
     <>
       {/* Logo - Always visible in top left */}
       <motion.div 
-        className="fixed top-6 left-0 px-5 md:px-15 z-50"
+        className="fixed top-4 md:top-6 left-0 px-5 md:px-15 z-50"
         initial="hidden"
         animate="visible"
         variants={fadeInVariants}
@@ -126,8 +133,12 @@ const Header = () => {
                       href={item.href}
                       className={`font-medium text-base transition-all duration-200 ${
                         item.isButton
-                          ? 'bg-[#E64C27] text-white px-8 py-4 block'
-                          : 'text-[#E2E2E2] hover:text-white'
+                          ? isActive(item.href)
+                            ? 'bg-white text-[#AEAEAE] px-8 py-4 block'
+                            : 'bg-[#E64C27] text-white px-8 py-4 block hover:bg-[#d43d1a]'
+                          : isActive(item.href)
+                            ? 'text-white border-b-2 border-white pb-1'
+                            : 'text-[#E2E2E2] hover:text-white'
                       }`}
                     >
                       {item.label}
@@ -274,8 +285,12 @@ const Header = () => {
                         onClick={closeMobileMenu}
                         className={`font-medium text-xl transition-all duration-200 block py-3 ${
                           item.isButton
-                            ? 'bg-[#E64C27] text-white px-6 py-4 text-center mt-8'
-                            : 'text-[#E2E2E2] hover:text-white border-b border-gray-800 hover:border-[#E64C27]'
+                            ? isActive(item.href)
+                              ? 'bg-white text-[#AEAEAE] px-6 py-4 text-center mt-8'
+                              : 'bg-[#E64C27] text-white px-6 py-4 text-center mt-8 hover:bg-[#d43d1a]'
+                            : isActive(item.href)
+                              ? 'text-white border-b-2 border-white pb-1'
+                              : 'text-[#E2E2E2] hover:text-white border-b border-gray-800 hover:border-[#E64C27]'
                         }`}
                       >
                         {item.label}
