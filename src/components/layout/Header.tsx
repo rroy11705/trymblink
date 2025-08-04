@@ -191,7 +191,7 @@ const Header = () => {
             
             {/* Mobile Menu */}
             <motion.div 
-              className="fixed top-0 right-0 h-full w-full max-w-sm bg-black z-50 lg:hidden"
+              className="fixed top-0 right-0 h-full w-full bg-black z-50 lg:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
