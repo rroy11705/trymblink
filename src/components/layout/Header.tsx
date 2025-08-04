@@ -201,7 +201,47 @@ const Header = () => {
                 damping: 30 
               }}
             >
-              <div className="flex flex-col h-full pt-20 px-8">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-800">
+                <Link href="/" onClick={closeMobileMenu} className="flex-shrink-0">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Image
+                      src="/images/logos/trymblink-full.svg"
+                      alt="Trymblink"
+                      width={130}
+                      height={24}
+                    />
+                  </motion.div>
+                </Link>
+                
+                {/* Close Button */}
+                <motion.button
+                  onClick={closeMobileMenu}
+                  className="text-white p-2"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Close menu"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </motion.button>
+              </div>
+
+              <div className="flex flex-col h-full pt-8 px-8">
                 <motion.nav 
                   className="flex flex-col space-y-8"
                   initial="hidden"

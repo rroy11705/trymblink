@@ -9,12 +9,12 @@ const Hero = () => {
   return (
     <motion.section 
       id='hero-home' 
-      className='relative w-full min-h-175 md:min-h-160 flex flex-colð overflow-hidden pt-72 px-6 sm:p-0'
+      className='relative w-full min-h-175 md:min-h-160 flex flex-col overflow-hidden px-6 sm:p-0'
       initial="hidden"
       animate="visible"
       variants={staggeredTextVariants}
     >
-      <div className="w-full flex flex-col md:flex-row items-start md:items-end justify-center gap-[30px] md:px-15">
+      <div className="w-full flex flex-col md:flex-row items-start md:items-end justify-center gap-[30px] pt-72 md:pt-92 md:px-15">
 				<motion.h1 
           className="relative text-[60px] md:text-[140px] font-medium leading-[97%] text-white text-gradient-hero"
           variants={textRevealVariants}
