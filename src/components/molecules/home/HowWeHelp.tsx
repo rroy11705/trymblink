@@ -49,7 +49,7 @@ const HowWeHelp = () => {
           variants={slideInRightVariants}
         >
 					<Image
-						src="/images/backgrounds/how-we-help.jpg"
+						src="/images/backgrounds/how-we-help.webp"
 						alt="How We Help"
 						fill
 						priority

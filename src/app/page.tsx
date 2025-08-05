@@ -11,7 +11,7 @@ import Success from "@/components/molecules/home/Success";
 import TrustedBy from "@/components/molecules/home/TrustedBy";
 
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="font-sans">
       <main className="w-full">

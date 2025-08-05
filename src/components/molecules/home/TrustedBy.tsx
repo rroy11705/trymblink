@@ -12,29 +12,29 @@ const TrustedBy = () => {
   const { ref, animate } = useScrollAnimation()
 
   const topRowLogos = [
-    { name: 'CREX', src: '/images/logos/trusted-by/crex.jpg' },
-    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.jpg' },
-    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.jpg' },
-    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.jpg' },
-    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.jpg' },
-    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.jpg' },
-    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.jpg' },
-    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.jpg' },
-    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.jpg' },
-    { name: 'SBI', src: '/images/logos/trusted-by/sbi.jpg' },
+    { name: 'CREX', src: '/images/logos/trusted-by/crex.webp' },
+    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.webp' },
+    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.webp' },
+    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.webp' },
+    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.webp' },
+    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.webp' },
+    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.webp' },
+    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.webp' },
+    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.webp' },
+    { name: 'SBI', src: '/images/logos/trusted-by/sbi.webp' },
   ]
 
   const bottomRowLogos = [
-    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.jpg' },
-    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.jpg' },
-    { name: 'SBI', src: '/images/logos/trusted-by/sbi.jpg' },
-    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.jpg' },
-    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.jpg' },
-    { name: 'CREX', src: '/images/logos/trusted-by/crex.jpg' },
-    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.jpg' },
-    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.jpg' },
-    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.jpg' },
-    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.jpg' },
+    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.webp' },
+    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.webp' },
+    { name: 'SBI', src: '/images/logos/trusted-by/sbi.webp' },
+    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.webp' },
+    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.webp' },
+    { name: 'CREX', src: '/images/logos/trusted-by/crex.webp' },
+    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.webp' },
+    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.webp' },
+    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.webp' },
+    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.webp' },
   ]
 
   // Embla Carousel setup for top row (moving right)

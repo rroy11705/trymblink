@@ -20,7 +20,7 @@ const Hero = () => {
           variants={imageRevealVariants}
         >
 				<Image
-					src="/images/backgrounds/contact-hero.png"
+					src="/images/backgrounds/contact-hero.webp"
 					alt="Your Success Our Responsibility"
 					fill
 					priority

@@ -25,14 +25,14 @@ const Goals = () => {
           variants={imageRevealVariants}
         >
           <Image
-            src="/images/backgrounds/goals.png"
+            src="/images/backgrounds/goals.webp"
             alt="Your Success Our Responsibility"
             fill
             className="hidden md:block"
             priority
           />
           <Image
-            src="/images/backgrounds/goals-mobile.png"
+            src="/images/backgrounds/goals-mobile.webp"
             alt="Your Success Our Responsibility"
             fill
             className='object-cover block md:hidden'

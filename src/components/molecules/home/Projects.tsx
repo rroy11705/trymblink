@@ -34,7 +34,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/trusted-by/icici-bank.jpg"
+							src="/images/logos/trusted-by/icici-bank.webp"
 							alt="Project 1"
 							width={538}
 							height={527}
@@ -59,7 +59,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/projects/amazon.jpg"
+							src="/images/logos/projects/amazon.webp"
 							alt="Project 2"
 							width={762}
 							height={634}
@@ -84,7 +84,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/projects/axis-bank.jpg"
+							src="/images/logos/projects/axis-bank.webp"
 							alt="Project 2"
 							width={762}
 							height={634}
@@ -109,7 +109,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/trusted-by/sbi.jpg"
+							src="/images/logos/trusted-by/sbi.webp"
 							alt="Project 1"
 							width={538}
 							height={527}

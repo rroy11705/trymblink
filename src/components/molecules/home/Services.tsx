@@ -41,7 +41,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/1.jpg"
+								src="/images/backgrounds/services/1.webp"
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -66,7 +66,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/2.jpg"
+								src="/images/backgrounds/services/2.webp"
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -90,7 +90,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/3.jpg"
+								src="/images/backgrounds/services/3.webp"
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -114,7 +114,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/4.jpg"
+								src="/images/backgrounds/services/4.webp"
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -138,7 +138,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/5.jpg"
+								src="/images/backgrounds/services/5.webp"
 								alt="Your Success Our Responsibility"
 								fill
 								priority

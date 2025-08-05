@@ -6,6 +6,7 @@ import { fadeInVariants, containerVariants } from '@/lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { countryCodes } from '@/lib/countryCodes'
 import { ContactFormData, ContactFormErrors, ContactAPIResponse, PageSource } from '@/types/contact'
+import DiagonalArrowIcon from '../../icons/general/DiagonalArrowIcon'
 
 interface ContactProps {
   pageSource?: PageSource
@@ -131,7 +132,7 @@ const Contact = ({ pageSource = PageSource.HOME }: ContactProps) => {
       variants={containerVariants}
     >
 			<div className='flex flex-col md:flex-row md:gap-12.5'>
-				{pageSource === PageSource.HOME && (
+				{[PageSource.HOME, PageSource.ABOUT_US].includes(pageSource) && (
 					<motion.div 
 						className="flex-1 mb-10 px-6 md:px-0"
 						variants={fadeInVariants}
@@ -326,14 +327,7 @@ const Contact = ({ pageSource = PageSource.HOME }: ContactProps) => {
 								} text-white`}
 							>
 								{isSubmitting ? 'Sending...' : 'Call me back'}
-								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<mask id="mask0_2009_683" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
-								<rect width="18" height="18" fill="#D9D9D9"/>
-								</mask>
-								<g mask="url(#mask0_2009_683)">
-								<path d="M4.72069 13.2332L3.9375 12.45L11.3179 5.0625H4.60819V3.9375H13.2332V12.5625H12.1082V5.85281L4.72069 13.2332Z" fill="white"/>
-								</g>
-								</svg>
+								<DiagonalArrowIcon />
 							</button>
 						</form>
 					</div>
