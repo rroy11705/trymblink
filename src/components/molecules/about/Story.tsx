@@ -1,12 +1,42 @@
 'use client'
 
-import React from 'react'
+import React, { Fragment, useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { slideInLeftVariants, containerVariants, textRevealVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 
+const StoryText = "We are TrymbLink, \n A design company founded by an architect and a sales visionary. We believe today's products, especially in SAAS, have lost touch with nature's intuitive design. "
+
 const Story = () => {
   const { ref, animate } = useScrollAnimation()
+
+  const StoryWords = useMemo(() => StoryText.split(' '), [])
+
+  useEffect(() => {
+    const threshold = screen.height / 2;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY; 
+      const OurStoryEle = document.getElementById('our-story');
+      const spans = document.querySelectorAll('#our-story p span'); // Select spans inside the handleScroll function
+
+      if (scrollPosition > (OurStoryEle?.offsetTop || 0) - threshold) {
+        const elementHeightPerSpan = ((OurStoryEle?.clientHeight || 0) / StoryWords.length);
+        spans.forEach((span, index) => {
+          if (scrollPosition > (OurStoryEle?.offsetTop || 0) + (elementHeightPerSpan * (index + 1)) - threshold) {
+            span.classList.add('text-black'); 
+          } else {
+            span.classList.remove('text-black'); 
+          }
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [StoryWords.length]);
 
   return (
     <motion.section 
@@ -17,7 +47,7 @@ const Story = () => {
       animate={animate}
       variants={containerVariants}
     >
-			<div className='w-full max-w-240 mx-auto'>
+			<div className='w-full max-w-200 mx-auto'>
         <motion.div 
           className='w-full space-y-16'
           variants={slideInLeftVariants}
@@ -28,11 +58,19 @@ const Story = () => {
 						OUR STORY
 					</motion.h6>
 					<motion.p 
-            className='text-[#B8B8B8] text-[32px] md:text-[46px] font-bold leading-[146%] text-left'
+            className='text-[#B8B8B8] text-[32px] md:text-[58px] font-bold leading-[146%] text-left'
             variants={textRevealVariants}
           >
-						<span className='text-black'>We are TrymbLink,</span><br /><br />
-						<span className='text-black'>A design company founded</span> by an architect and a sales visionary. We believe today&apos;s products, especially in SAAS, have lost touch with nature&apos;s intuitive design.  
+            {StoryWords
+              .map((word, index) => 
+                word === '\n' ? 
+                  <Fragment key={`line-1-${word}-${index}`}>
+                    <br /><br />
+                  </Fragment> :
+                  <span key={`line-1-${word}-${index}`} className='text-black'>
+                    {word}{' '}
+                  </span>
+              )}
 					</motion.p>
 				</motion.div>
 			</div>
