@@ -1,13 +1,17 @@
 'use client'
 
-import Image from 'next/image'
 import React from 'react'
+import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { containerVariants, textRevealVariants, imageRevealVariants, fadeInVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 import TryambakamTextIcon from '@/components/icons/decorative/TryambakamTextIcon'
 import TryambakamTextIconMobile from '@/components/icons/decorative/TryambakamTextIconMobile'
-import { Player } from '@lottiefiles/react-lottie-player';
+
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then(mod => ({ default: mod.Player })),
+  { ssr: false }
+)
 
 const Meaning = () => {
   const { ref, animate } = useScrollAnimation()
