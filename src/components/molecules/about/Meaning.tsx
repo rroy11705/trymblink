@@ -7,6 +7,7 @@ import { containerVariants, textRevealVariants, imageRevealVariants, fadeInVaria
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 import TryambakamTextIcon from '@/components/icons/decorative/TryambakamTextIcon'
 import TryambakamTextIconMobile from '@/components/icons/decorative/TryambakamTextIconMobile'
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const Meaning = () => {
   const { ref, animate } = useScrollAnimation()
@@ -25,12 +26,11 @@ const Meaning = () => {
           className='relative'
           variants={imageRevealVariants}
         >
-					<Image
-						src="/images/logos/tryambakam.webp"
-						alt="How We Help"
-						width={140}
-						height={140}
-						priority
+					<Player
+						autoplay
+						loop
+						src="/images/logos/tryambakam.json"
+						style={{ height: '140px', width: '140px' }}
 					/>
 				</motion.div>
 				<motion.div
