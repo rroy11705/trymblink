@@ -2,8 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { fadeInVariants, imageRevealVariants, staggeredTextVariants, textRevealVariants } from '../../../lib/animations'
-import Link from 'next/link'
+import { imageRevealVariants, staggeredTextVariants, textRevealVariants } from '../../../lib/animations'
 import Image from 'next/image'
 
 const Hero = () => {

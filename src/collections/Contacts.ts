@@ -43,13 +43,6 @@ export const Contacts: CollectionConfig = {
       name: 'phone',
       type: 'text',
       required: true,
-      validate: (value: string) => {
-        const phoneRegex = /^[\d\s\-\(\)\+]{10,}$/
-        if (!phoneRegex.test(value.replace(/\s/g, ''))) {
-          return 'Please enter a valid phone number'
-        }
-        return true
-      },
       admin: {
         description: 'Phone number without country code',
       },
