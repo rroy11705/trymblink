@@ -13,22 +13,10 @@ import { Media } from './collections/Media'
 import { Contacts } from './collections/Contacts'
 import { Newsletter } from './collections/Newsletter'
 
-import dotenv from 'dotenv'
-dotenv.config()
+import 'dotenv/config'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
-// Validate required environment variables
-const payloadSecret = process.env.PAYLOAD_SECRET
-if (!payloadSecret) {
-  throw new Error('PAYLOAD_SECRET environment variable is required')
-}
-
-const databaseUri = process.env.DATABASE_URI
-if (!databaseUri) {
-  throw new Error('DATABASE_URI environment variable is required')
-}
 
 export default buildConfig({
   admin: {
@@ -39,12 +27,12 @@ export default buildConfig({
   },
   collections: [Users, Media, Contacts, Newsletter],
   editor: lexicalEditor(),
-  secret: payloadSecret,
+  secret: process.env.PAYLOAD_SECRET!,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: mongooseAdapter({
-    url: databaseUri,
+    url: process.env.DATABASE_URI!,
     connectOptions: {
       maxPoolSize: 10,
       serverSelectionTimeoutMS: 5000,
