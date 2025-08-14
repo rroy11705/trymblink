@@ -13,6 +13,9 @@ import { Media } from './collections/Media'
 import { Contacts } from './collections/Contacts'
 import { Newsletter } from './collections/Newsletter'
 
+import dotenv from 'dotenv'
+dotenv.config()
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -31,11 +34,17 @@ export default buildConfig({
   },
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || '',
+    connectOptions: {
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 5000,
+      socketTimeoutMS: 45000,
+      bufferCommands: false,
+    },
   }),
   sharp,
   email: resendAdapter({
     defaultFromAddress: 'noreply@trymblink.com',
-    defaultFromName: 'Payload CMS',
+    defaultFromName: 'Trymblink',
     apiKey: process.env.RESEND_API_KEY || '',
   }),
   plugins: [

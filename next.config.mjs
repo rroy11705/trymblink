@@ -2,7 +2,10 @@ import { withPayload } from '@payloadcms/next/withPayload'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Your Next.js config here
+  // AWS Amplify configuration
+  output: 'standalone',
+  serverExternalPackages: ['@payloadcms/db-mongodb'],
+  // Webpack configuration for PayloadCMS
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
