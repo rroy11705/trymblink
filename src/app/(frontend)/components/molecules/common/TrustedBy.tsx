@@ -8,7 +8,11 @@ import Autoplay from 'embla-carousel-autoplay'
 import { fadeInVariants, containerVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 
-const TrustedBy = () => {
+interface TrustedByProps {
+  rows?: number; // Number of rows to display, default is 1
+}
+
+const TrustedBy = ({ rows = 1 }: TrustedByProps) => {
   const { ref, animate } = useScrollAnimation()
 
   const topRowLogos = [
@@ -115,30 +119,32 @@ const TrustedBy = () => {
         </motion.div>
 
         {/* Bottom row - moving left */}
-        <motion.div 
-          className="overflow-hidden"
-          variants={fadeInVariants}
-        >
-          <div className="embla" ref={bottomRowRef} style={{ transform: 'scaleX(-1)' }}>
-            <div className="embla__container">
-              {bottomRowLogos.map((logo) => (
-                <div
-                  key={`bottom-${logo.name}`}
-                  className="embla__slide w-30 md:w-100 aspect-[395/264]"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={395}
-                    height={264}
-                    className="w-full h-full object-contain"
-                    style={{ transform: 'scaleX(-1)' }}
-                  />
-                </div>
-              ))}
+        {rows === 2 && (
+          <motion.div 
+            className="overflow-hidden"
+            variants={fadeInVariants}
+          >
+            <div className="embla" ref={bottomRowRef} style={{ transform: 'scaleX(-1)' }}>
+              <div className="embla__container">
+                {bottomRowLogos.map((logo) => (
+                  <div
+                    key={`bottom-${logo.name}`}
+                    className="embla__slide w-30 md:w-100 aspect-[395/264]"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      width={395}
+                      height={264}
+                      className="w-full h-full object-contain"
+                      style={{ transform: 'scaleX(-1)' }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        )}
       </div>
     </motion.section>
   )

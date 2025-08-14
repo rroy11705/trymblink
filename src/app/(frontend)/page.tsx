@@ -8,7 +8,7 @@ import Newsletter from "@/components/molecules/home/Newsletter";
 import Projects from "@/components/molecules/home/Projects";
 import Services from "@/components/molecules/home/Services";
 import Success from "@/components/molecules/home/Success";
-import TrustedBy from "@/components/molecules/home/TrustedBy";
+import TrustedBy from "@/components/molecules/common/TrustedBy";
 
 
 export default function HomePage() {
@@ -19,7 +19,7 @@ export default function HomePage() {
         <Success />
         <Goals />
         <HowWeHelp />
-        <TrustedBy />
+        <TrustedBy rows={2} />
         <Impact />
         <Services />
         <Projects />

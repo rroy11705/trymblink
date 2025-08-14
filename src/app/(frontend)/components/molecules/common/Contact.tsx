@@ -132,7 +132,7 @@ const Contact = ({ pageSource = PageSource.HOME }: ContactProps) => {
       variants={containerVariants}
     >
 			<div className='flex flex-col md:flex-row md:gap-12.5'>
-				{[PageSource.HOME, PageSource.ABOUT_US].includes(pageSource) && (
+				{[PageSource.HOME, PageSource.ABOUT_US, PageSource.SERVICES].includes(pageSource) && (
 					<motion.div 
 						className="flex-1 mb-10 px-6 md:px-0"
 						variants={fadeInVariants}
