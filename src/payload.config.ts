@@ -51,8 +51,9 @@ export default buildConfig({
     s3Storage({
       collections: {
         media: {
+          prefix: 'media',
           generateFileURL: ({ filename }) => {
-            return `https://${process.env.CLOUDFRONT_DOMAIN}/${filename}`
+            return `https://${process.env.CLOUDFRONT_DOMAIN}/media/${filename}`
           },
         },
       },
