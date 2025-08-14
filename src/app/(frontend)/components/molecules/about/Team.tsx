@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { containerVariants, textRevealVariants, imageRevealVariants } from '../../../lib/animations'
+import { containerVariants, imageRevealVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 import Image from 'next/image'
 import Link from 'next/link'

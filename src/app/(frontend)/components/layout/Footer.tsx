@@ -9,8 +9,6 @@ import Link from 'next/link'
 import CopyIcon from '../icons/general/CopyIcon'
 import DiagonalArrowIcon from '../icons/general/DiagonalArrowIcon'
 import EmailIcon from '../icons/general/EmailIcon'
-import FacebookIcon from '../icons/social/FacebookIcon'
-import InstagramIcon from '../icons/social/InstagramIcon'
 import LinkedInIcon from '../icons/social/LinkedInIcon'
 
 const Footer = () => {
