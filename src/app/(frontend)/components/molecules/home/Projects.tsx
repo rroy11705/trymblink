@@ -26,11 +26,11 @@ const Projects = () => {
 			</motion.div>
 			<div className='flex flex-row flex-wrap gap-5'>
 				<motion.div 
-					className='relative w-full md:w-[calc(40%_-_13px)] h-fit' 
+					className='relative w-full md:w-[calc(40%_-_13px)] h-fit flex flex-col' 
 					variants={fadeInVariants}
 				>
 					<motion.div 
-						className=""
+						className="w-full overflow-hidden"
 						variants={imageRevealVariants}
 					>
 						<Image
@@ -38,10 +38,11 @@ const Projects = () => {
 							alt="Project 1"
 							width={538}
 							height={527}
+							className='w-full'
 						/>
 					</motion.div>
 					<div className='relative z-10 mt-6'>
-							<h2 className="text-white text-[20px] font-medium leading-[114%] text-left mb-6 flex flex-row justify-between items-end">
+							<h2 className="text-white text-[20px] font-medium leading-[114%] text-left mb-6 flex flex-row justify-between items-start gap-2">
 								<span>ICICI Bank Customer portal</span>
 								<span className='text-[12px] md:text-[16px] font-light'>2023</span>
 							</h2>
@@ -51,22 +52,23 @@ const Projects = () => {
 					</div>
 				</motion.div>
 				<motion.div 
-					className='relative w-full md:w-[calc(60%_-_13px)] h-fit' 
+					className='relative w-full md:w-[calc(60%_-_13px)] h-fit flex flex-col' 
 					variants={fadeInVariants}
 				>
 					<motion.div 
-						className=""
+						className="w-full overflow-hidden"
 						variants={imageRevealVariants}
 					>
 						<Image
 							src="/images/logos/projects/amazon.webp"
-							alt="Project 2"
+							alt="amazon"
 							width={762}
 							height={634}
+							className='w-full'
 						/>
 					</motion.div>
 					<div className='relative z-10 mt-6'>
-							<h2 className="text-white text-[20px] font-medium leading-[108%] -tracking-[0.01] text-left mb-6 flex flex-row justify-between items-end">
+							<h2 className="text-white text-[20px] font-medium leading-[108%] -tracking-[0.01] text-left mb-6 flex flex-row justify-between items-start gap-2">
 								<span>Amazon Customer success</span>
 								<span className='text-[12px] md:text-[16px] font-light'>2019</span>
 							</h2>
@@ -76,22 +78,23 @@ const Projects = () => {
 					</div>
 				</motion.div>
 				<motion.div 
-					className='relative w-full md:w-[calc(60%_-_13px)] h-fit' 
+					className='relative w-full md:w-[calc(60%_-_13px)] h-fit flex flex-col' 
 					variants={fadeInVariants}
 				>
 					<motion.div 
-						className=""
+						className="w-full overflow-hidden"
 						variants={imageRevealVariants}
 					>
 						<Image
 							src="/images/logos/projects/axis-bank.webp"
-							alt="Project 2"
+							alt="axis-bank"
 							width={762}
 							height={634}
+							className='w-full'
 						/>
 					</motion.div>
 					<div className='relative z-10 mt-6'>
-							<h2 className="text-white text-[20px] font-medium leading-[108%] -tracking-[0.01] text-left mb-6 flex flex-row justify-between items-end">
+							<h2 className="text-white text-[20px] font-medium leading-[108%] -tracking-[0.01] text-left mb-6 flex flex-row justify-between items-start gap-2">
 								<span>Axis Bank Back end support system</span>
 								<span className='text-[12px] md:text-[16px] font-light'>2019</span>
 							</h2>
@@ -101,22 +104,23 @@ const Projects = () => {
 					</div>
 				</motion.div>
 				<motion.div 
-					className='relative w-full md:w-[calc(40%_-_13px)] h-fit' 
+					className='relative w-full md:w-[calc(40%_-_13px)] h-fit flex flex-col' 
 					variants={fadeInVariants}
 				>
 					<motion.div 
-						className=""
+						className="w-full overflow-hidden"
 						variants={imageRevealVariants}
 					>
 						<Image
 							src="/images/logos/trusted-by/sbi.webp"
-							alt="Project 1"
+							alt="sbi"
 							width={538}
 							height={527}
+							className='w-full'
 						/>
 					</motion.div>
 					<div className='relative z-10 mt-6'>
-							<h2 className="text-white text-[20px] font-medium leading-[114%] text-left mb-6 flex flex-row justify-between items-end">
+							<h2 className="text-white text-[20px] font-medium leading-[114%] text-left mb-6 flex flex-row justify-between items-start gap-2">
 								<span>Optimised due collection process of SBI Bank</span>
 								<span className='text-[12px] md:text-[16px] font-light'>2024</span>
 							</h2>
