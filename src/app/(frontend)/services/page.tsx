@@ -6,7 +6,7 @@ import TrustedBy from "@/components/molecules/common/TrustedBy";
 import { PageSource } from "@/types/contact";
 
 
-export default function HomePage() {
+export default function ServicesPage() {
   return (
     <div className="font-sans">
       <main className="w-full">

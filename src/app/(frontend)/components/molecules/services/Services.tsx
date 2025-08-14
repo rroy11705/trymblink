@@ -7,15 +7,17 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import Image from 'next/image'
 
 const Services = () => {
-  const { ref, animate } = useScrollAnimation()
+  const { ref: sectionOneRef, animate: sectionOneAnimate } = useScrollAnimation()
+	const { ref: sectionTwoRef, animate: sectionTwoAnimate } = useScrollAnimation()
+	const { ref: sectionThreeRef, animate: sectionThreeAnimate } = useScrollAnimation()
 
   return (
 		<>
 			<motion.section 
-				ref={ref}
+				ref={sectionOneRef}
 				className='relative w-full px-6 md:px-15 py-24 overflow-hidden'
 				initial="hidden"
-				animate={animate}
+				animate={sectionOneAnimate}
 				variants={containerVariants}
 			>
 				<motion.div 
@@ -158,10 +160,10 @@ const Services = () => {
 			</motion.section>
 
 			<motion.section 
-				ref={ref}
+				ref={sectionTwoRef}
 				className='relative w-full px-6 md:px-15 py-24 overflow-hidden'
 				initial="hidden"
-				animate={animate}
+				animate={sectionTwoAnimate}
 				variants={containerVariants}
 			>
 				<motion.div 
@@ -260,10 +262,10 @@ const Services = () => {
 			</motion.section>
 
 			<motion.section 
-				ref={ref}
+				ref={sectionThreeRef}
 				className='relative w-full px-6 md:px-15 py-24 overflow-hidden'
 				initial="hidden"
-				animate={animate}
+				animate={sectionThreeAnimate}
 				variants={containerVariants}
 			>
 				<motion.div 

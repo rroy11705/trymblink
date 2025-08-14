@@ -51,13 +51,13 @@ const Footer = () => {
 							<Link href="/" className='text-white text-left'>
 								Home
 							</Link>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/services" className='text-white text-left'>
 								Services
 							</Link>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/works" className='text-white text-left'>
 								Works
 							</Link>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/career" className='text-white text-left'>
 								Career
 							</Link>
 						</div>
@@ -65,13 +65,13 @@ const Footer = () => {
 							<h2 className="text-white/60 text-left">
 								Legal
 							</h2>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/about" className='text-white text-left'>
 								About Us
 							</Link>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/terms-and-conditions" className='text-white text-left'>
 								Terms & condition
 							</Link>
-							<Link href="/" className='text-white text-left'>
+							<Link href="/privacy-policy" className='text-white text-left'>
 								Privacy policy
 							</Link>
 						</div>
