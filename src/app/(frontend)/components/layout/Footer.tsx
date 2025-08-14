@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { imageRevealVariants } from '@/lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getImageUrl } from '@/lib/imageUrl'
 import Link from 'next/link'
 import CopyIcon from '../icons/general/CopyIcon'
 import DiagonalArrowIcon from '../icons/general/DiagonalArrowIcon'
@@ -32,7 +33,7 @@ const Footer = () => {
 					variants={imageRevealVariants}
 				>
 					<Image
-						src="/images/logos/trymblink-full-gradient.svg"
+						src={getImageUrl('/images/logos/trymblink-full-gradient.svg')}
 						alt="Your Success Our Responsibility"
 						width={268}
 						height={50}

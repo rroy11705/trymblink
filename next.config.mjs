@@ -5,11 +5,28 @@ const nextConfig = {
   // AWS Amplify configuration
   output: 'standalone',
   serverExternalPackages: ['@payloadcms/db-mongodb'],
+  // Image configuration for CloudFront CDN
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: process.env.CLOUDFRONT_DOMAIN,
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   // Ensure environment variables are available at runtime
   env: {
     PAYLOAD_SECRET: process.env.PAYLOAD_SECRET,
     DATABASE_URI: process.env.DATABASE_URI,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    S3_BUCKET: process.env.S3_BUCKET,
+    S3_ACCESS_KEY_ID: process.env.S3_ACCESS_KEY_ID,
+    S3_SECRET_ACCESS_KEY: process.env.S3_SECRET_ACCESS_KEY,
+    S3_REGION: process.env.S3_REGION,
+    CLOUDFRONT_DOMAIN: process.env.CLOUDFRONT_DOMAIN,
+    NEXT_PUBLIC_CDN_URL: process.env.NEXT_PUBLIC_CDN_URL,
   },
   // Webpack configuration for PayloadCMS
   webpack: (webpackConfig) => {

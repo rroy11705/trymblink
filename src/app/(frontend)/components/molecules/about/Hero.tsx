@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, fadeInVariants, imageRevealVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getImageUrl } from '../../../lib/imageUrl'
 import Image from 'next/image'
 
 const Hero = () => {
@@ -22,14 +23,14 @@ const Hero = () => {
 				variants={imageRevealVariants}
 			>
 				<Image
-					src="/images/backgrounds/about-us-hero.webp"
+					src={getImageUrl('/images/backgrounds/about-us-hero.webp')}
 					alt="Ice burg"
 					fill
 					className="object-cover object-bottom hidden md:block"
 					priority
 				/>
 				<Image
-					src="/images/backgrounds/about-us-hero-mobile.webp"
+					src={getImageUrl('/images/backgrounds/about-us-hero-mobile.webp')}
 					alt="Ice burg"
 					fill
 					className="object-cover object-bottom md:hidden"

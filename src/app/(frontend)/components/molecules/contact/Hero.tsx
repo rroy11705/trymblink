@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { imageRevealVariants, staggeredTextVariants, textRevealVariants } from '../../../lib/animations'
+import { getImageUrl } from '../../../lib/imageUrl'
 import Image from 'next/image'
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
           variants={imageRevealVariants}
         >
 				<Image
-					src="/images/backgrounds/contact-hero.webp"
+					src={getImageUrl('/images/backgrounds/contact-hero.webp')}
 					alt="Your Success Our Responsibility"
 					fill
 					priority

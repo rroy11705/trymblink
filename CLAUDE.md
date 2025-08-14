@@ -63,3 +63,4 @@ Required environment variables:
 - All commands include `--no-deprecation` flag to suppress Node.js warnings
 - Build process requires increased memory allocation (8GB)
 - TypeScript paths configured for clean imports with `@/` prefix
+- **IMPORTANT**: Development server runs in a separate terminal - NEVER execute `pnpm dev` or start the server

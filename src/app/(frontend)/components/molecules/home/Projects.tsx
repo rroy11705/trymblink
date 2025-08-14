@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInVariants, containerVariants, imageRevealVariants } from '@/lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getImageUrlFromFolder } from '@/lib/imageUrl'
 import Image from 'next/image'
 
 const Projects = () => {
@@ -34,7 +35,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/trusted-by/icici-bank.webp"
+							src={getImageUrlFromFolder('logos', 'icici-bank.webp', 'trusted-by')}
 							alt="Project 1"
 							width={538}
 							height={527}
@@ -60,7 +61,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/projects/amazon.webp"
+							src={getImageUrlFromFolder('logos', 'amazon.webp', 'projects')}
 							alt="amazon"
 							width={762}
 							height={634}
@@ -86,7 +87,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/projects/axis-bank.webp"
+							src={getImageUrlFromFolder('logos', 'axis-bank.webp', 'projects')}
 							alt="axis-bank"
 							width={762}
 							height={634}
@@ -112,7 +113,7 @@ const Projects = () => {
 						variants={imageRevealVariants}
 					>
 						<Image
-							src="/images/logos/trusted-by/sbi.webp"
+							src={getImageUrlFromFolder('logos', 'sbi.webp', 'trusted-by')}
 							alt="sbi"
 							width={538}
 							height={527}

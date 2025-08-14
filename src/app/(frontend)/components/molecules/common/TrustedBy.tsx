@@ -7,6 +7,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { fadeInVariants, containerVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
+import { getImageUrlFromFolder } from '../../../lib/imageUrl'
 
 interface TrustedByProps {
   rows?: number; // Number of rows to display, default is 1
@@ -16,29 +17,29 @@ const TrustedBy = ({ rows = 1 }: TrustedByProps) => {
   const { ref, animate } = useScrollAnimation()
 
   const topRowLogos = [
-    { name: 'CREX', src: '/images/logos/trusted-by/crex.webp' },
-    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.webp' },
-    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.webp' },
-    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.webp' },
-    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.webp' },
-    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.webp' },
-    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.webp' },
-    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.webp' },
-    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.webp' },
-    { name: 'SBI', src: '/images/logos/trusted-by/sbi.webp' },
+    { name: 'CREX', src: getImageUrlFromFolder('logos', 'crex.webp', 'trusted-by') },
+    { name: 'CreditLink', src: getImageUrlFromFolder('logos', 'creditlink.webp', 'trusted-by') },
+    { name: 'Dell Technologies', src: getImageUrlFromFolder('logos', 'dell-technologies.webp', 'trusted-by') },
+    { name: 'Amazon', src: getImageUrlFromFolder('logos', 'amazon.webp', 'trusted-by') },
+    { name: 'HCL Technologies', src: getImageUrlFromFolder('logos', 'hcl-tech.webp', 'trusted-by') },
+    { name: 'ICICI Bank', src: getImageUrlFromFolder('logos', 'icici-bank.webp', 'trusted-by') },
+    { name: 'Axis Bank', src: getImageUrlFromFolder('logos', 'axis-bank.webp', 'trusted-by') },
+    { name: 'IndusInd Bank', src: getImageUrlFromFolder('logos', 'indisind-bank.webp', 'trusted-by') },
+    { name: 'Yes Bank', src: getImageUrlFromFolder('logos', 'yes-bank.webp', 'trusted-by') },
+    { name: 'SBI', src: getImageUrlFromFolder('logos', 'sbi.webp', 'trusted-by') },
   ]
 
   const bottomRowLogos = [
-    { name: 'Axis Bank', src: '/images/logos/trusted-by/axis-bank.webp' },
-    { name: 'IndusInd Bank', src: '/images/logos/trusted-by/indisind-bank.webp' },
-    { name: 'SBI', src: '/images/logos/trusted-by/sbi.webp' },
-    { name: 'Yes Bank', src: '/images/logos/trusted-by/yes-bank.webp' },
-    { name: 'Dell Technologies', src: '/images/logos/trusted-by/dell-technologies.webp' },
-    { name: 'CREX', src: '/images/logos/trusted-by/crex.webp' },
-    { name: 'ICICI Bank', src: '/images/logos/trusted-by/icici-bank.webp' },
-    { name: 'CreditLink', src: '/images/logos/trusted-by/creditlink.webp' },
-    { name: 'Amazon', src: '/images/logos/trusted-by/amazon.webp' },
-    { name: 'HCL Technologies', src: '/images/logos/trusted-by/hcl-tech.webp' },
+    { name: 'Axis Bank', src: getImageUrlFromFolder('logos', 'axis-bank.webp', 'trusted-by') },
+    { name: 'IndusInd Bank', src: getImageUrlFromFolder('logos', 'indisind-bank.webp', 'trusted-by') },
+    { name: 'SBI', src: getImageUrlFromFolder('logos', 'sbi.webp', 'trusted-by') },
+    { name: 'Yes Bank', src: getImageUrlFromFolder('logos', 'yes-bank.webp', 'trusted-by') },
+    { name: 'Dell Technologies', src: getImageUrlFromFolder('logos', 'dell-technologies.webp', 'trusted-by') },
+    { name: 'CREX', src: getImageUrlFromFolder('logos', 'crex.webp', 'trusted-by') },
+    { name: 'ICICI Bank', src: getImageUrlFromFolder('logos', 'icici-bank.webp', 'trusted-by') },
+    { name: 'CreditLink', src: getImageUrlFromFolder('logos', 'creditlink.webp', 'trusted-by') },
+    { name: 'Amazon', src: getImageUrlFromFolder('logos', 'amazon.webp', 'trusted-by') },
+    { name: 'HCL Technologies', src: getImageUrlFromFolder('logos', 'hcl-tech.webp', 'trusted-by') },
   ]
 
   // Embla Carousel setup for top row (moving right)

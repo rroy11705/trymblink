@@ -5,6 +5,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { textRevealVariants, imageRevealVariants, containerVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
+import { getImageUrl } from '../../../lib/imageUrl'
 
 const Goals = () => {
   const { ref, animate } = useScrollAnimation()
@@ -25,14 +26,14 @@ const Goals = () => {
           variants={imageRevealVariants}
         >
           <Image
-            src="/images/backgrounds/goals.webp"
+            src={getImageUrl('/images/backgrounds/goals.webp')}
             alt="Your Success Our Responsibility"
             fill
             className="hidden md:block"
             priority
           />
           <Image
-            src="/images/backgrounds/goals-mobile.webp"
+            src={getImageUrl('/images/backgrounds/goals-mobile.webp')}
             alt="Your Success Our Responsibility"
             fill
             className='object-cover block md:hidden'

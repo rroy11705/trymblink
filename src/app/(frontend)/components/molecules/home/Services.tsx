@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInVariants, containerVariants, imageRevealVariants } from '@/lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { getImageUrlFromFolder } from '@/lib/imageUrl'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -41,7 +42,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/1.webp"
+								src={getImageUrlFromFolder('backgrounds', '1.webp', 'services')}
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -66,7 +67,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/2.webp"
+								src={getImageUrlFromFolder('backgrounds', '2.webp', 'services')}
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -90,7 +91,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/3.webp"
+								src={getImageUrlFromFolder('backgrounds', '3.webp', 'services')}
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -114,7 +115,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/4.webp"
+								src={getImageUrlFromFolder('backgrounds', '4.webp', 'services')}
 								alt="Your Success Our Responsibility"
 								fill
 								priority
@@ -138,7 +139,7 @@ const Services = () => {
 							variants={imageRevealVariants}
 						>
 							<Image
-								src="/images/backgrounds/services/5.webp"
+								src={getImageUrlFromFolder('backgrounds', '5.webp', 'services')}
 								alt="Your Success Our Responsibility"
 								fill
 								priority

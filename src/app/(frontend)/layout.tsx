@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
+import { getImageUrl } from "./lib/imageUrl";
 
 import "./styles/globals.css"
 
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'Trymblink',
     images: [
       {
-        url: '/images/logos/trymblink.webp',
+        url: getImageUrl('/images/logos/trymblink.webp'),
         width: 1200,
         height: 630,
         alt: 'Trymblink - Digital Product Development & Consulting',
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Trymblink - Digital Product Development & Consulting",
     description: "Leading digital product development and consulting company specializing in innovative solutions, web development, mobile apps, and digital transformation for businesses worldwide.",
-    images: ['/images/logos/trymblink.webp'],
+    images: [getImageUrl('/images/logos/trymblink.webp')],
     creator: '@trymblink',
   },
   robots: {

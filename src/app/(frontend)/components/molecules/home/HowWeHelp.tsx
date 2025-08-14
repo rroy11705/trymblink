@@ -5,6 +5,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { slideInLeftVariants, slideInRightVariants, containerVariants, textRevealVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
+import { getImageUrl } from '../../../lib/imageUrl'
 
 const HowWeHelp = () => {
   const { ref, animate } = useScrollAnimation()
@@ -49,7 +50,7 @@ const HowWeHelp = () => {
           variants={slideInRightVariants}
         >
 					<Image
-						src="/images/backgrounds/how-we-help.webp"
+						src={getImageUrl('/images/backgrounds/how-we-help.webp')}
 						alt="How We Help"
 						fill
 						priority

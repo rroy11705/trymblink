@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { headerVariants, fadeInVariants, navLinkVariants, navItemVariants } from '../../lib/animations'
+import { getImageUrl } from '../../lib/imageUrl'
 
 interface NavigationItem {
   label: string
@@ -103,7 +104,7 @@ const Header = () => {
             transition={{ duration: 0.2 }}
           >
             <Image
-              src="/images/logos/trymblink-full.svg"
+              src={getImageUrl('/images/logos/trymblink-full.svg')}
               alt="Trymblink"
               width={130}
               height={24}
@@ -220,7 +221,7 @@ const Header = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <Image
-                      src="/images/logos/trymblink-full.svg"
+                      src={getImageUrl('/images/logos/trymblink-full.svg')}
                       alt="Trymblink"
                       width={130}
                       height={24}
