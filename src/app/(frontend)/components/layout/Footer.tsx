@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { imageRevealVariants } from '@/lib/animations'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
@@ -15,6 +15,18 @@ import LinkedInIcon from '../icons/social/LinkedInIcon'
 
 const Footer = () => {
   const { ref } = useScrollAnimation()
+  const [showCopyMessage, setShowCopyMessage] = useState(false)
+
+  const copyEmailToClipboard = async () => {
+    const email = 'heya@trymblink.com'
+    try {
+      await navigator.clipboard.writeText(email)
+      setShowCopyMessage(true)
+      setTimeout(() => setShowCopyMessage(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy email: ', err)
+    }
+  }
   return (
     <motion.footer ref={ref} className='relative px-6 md:px-15 bg-[#060410]'>
 			<div className='border-b border-[#313039] py-12.5'>
@@ -65,48 +77,56 @@ const Footer = () => {
 						</div>
 					</div>
 					<div className='w-full md:w-auto flex flex-col items-end justify-center gap-6'>
-						<div className='hidden md:flex flex-row items-center justify-center gap-4'>
-							<h2 className="text-white/60 text-left">
-								Mail directly to us at
-							</h2>
-							<Link href="mailto:heya@trymblink.com" className='text-[28px]'>
-								heya@trymblink.com
-							</Link>
-							<button className='w-12.5 h-12.5 bg-[#202020] flex items-center justify-center cursor-pointer'>
-								<CopyIcon />
-							</button>
-							<Link
-								href="mailto:heya@trymblink.com"
-								className='font-medium text-base transition-all duration-200 bg-[#E64C27] text-white px-4 py-3 flex items-center justify-center gap-2'
-							>
-								Mail us
-								<DiagonalArrowIcon />
-							</Link>
-						</div>
-						<div className='bg-white/5 md:hidden w-full flex flex-row items-center justify-between p-4 border border-white/10'>
-							<Link href="mailto:heya@trymblink.com" className='text-[14px]'>
-								heya@trymblink.com
-							</Link>
-							<div className='flex flex-row gap-2'>
-								<button className='w-8 h-8 bg-[#202020] flex items-center justify-center cursor-pointer'>
+						<div className='relative hidden md:flex flex-col items-end gap-2'>
+							<div className='flex flex-row items-center justify-center gap-4'>
+								<h2 className="text-white/60 text-left">
+									Mail directly to us at
+								</h2>
+								<Link href="mailto:heya@trymblink.com" className='text-[28px]'>
+									heya@trymblink.com
+								</Link>
+								<button onClick={copyEmailToClipboard} className='w-12.5 h-12.5 bg-[#202020] flex items-center justify-center cursor-pointer hover:bg-[#E64C27] transition-colors'>
 									<CopyIcon />
 								</button>
 								<Link
 									href="mailto:heya@trymblink.com"
-									className='font-medium text-base transition-all duration-200 bg-[#E64C27] text-white w-8 h-8 flex items-center justify-center gap-2'
+									className='font-medium text-base transition-all duration-200 bg-[#E64C27] text-white px-4 py-3 flex items-center justify-center gap-2'
 								>
-									<EmailIcon />
+									Mail us
+									<DiagonalArrowIcon />
 								</Link>
 							</div>
+							{showCopyMessage && (
+								<p className='absolute -bottom-5 text-green-400 text-sm animate-fade-in'>
+									Email copied to clipboard
+								</p>
+							)}
+						</div>
+						<div className='relative md:hidden w-full flex flex-col gap-2'>
+							<div className='bg-white/5 w-full flex flex-row items-center justify-between p-4 border border-white/10'>
+								<Link href="mailto:heya@trymblink.com" className='text-[14px]'>
+									heya@trymblink.com
+								</Link>
+								<div className='flex flex-row gap-2'>
+									<button onClick={copyEmailToClipboard} className='w-8 h-8 bg-[#202020] flex items-center justify-center cursor-pointer hover:bg-[#E64C27] transition-colors'>
+										<CopyIcon />
+									</button>
+									<Link
+										href="mailto:heya@trymblink.com"
+										className='font-medium text-base transition-all duration-200 bg-[#E64C27] text-white w-8 h-8 flex items-center justify-center gap-2'
+									>
+										<EmailIcon />
+									</Link>
+								</div>
+							</div>
+							{showCopyMessage && (
+								<p className='absolute -bottom-6 text-green-400 text-sm text-center animate-fade-in'>
+									Email copied to clipboard
+								</p>
+							)}
 						</div>
 						<div className='w-full flex flex-row items-center justify-end gap-4'>
-							<Link href="/" className='w-12.5 h-12.5 md:w-25 md:h-25 bg-[#202020] hover:bg-[#E64C27] flex items-center justify-center'>
-								<FacebookIcon />
-							</Link>
-							<Link href="/" className='w-12.5 h-12.5 md:w-25 md:h-25 bg-[#202020] hover:bg-[#E64C27] flex items-center justify-center'>
-								<InstagramIcon />
-							</Link>
-							<Link href="/" className='w-12.5 h-12.5 md:w-25 md:h-25 bg-[#202020] hover:bg-[#E64C27] flex items-center justify-center'>
+							<Link href="http://linkedin.com/company/trymblink/posts/?feedView=all" target='_blank' className='w-12.5 h-12.5 md:w-25 md:h-25 bg-[#202020] hover:bg-[#E64C27] flex items-center justify-center'>
 								<LinkedInIcon />
 							</Link>
 						</div>
