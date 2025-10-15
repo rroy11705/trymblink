@@ -56,15 +56,15 @@ const Hero = () => {
 						className="text-white text-[20px] md:text-[54px] font-medium leading-[110%] -tracking-[0.02em] text-right mb-10"
 						variants={fadeInVariants}
 					>
-						The magic isn&apos;et above the surface,<br />
-						It&apos;es buried deep in the problem.
+						The magic isn&apos;t above the surface,<br />
+						It&apos;s buried deep in the problem.
 					</motion.h4>
 
 					<motion.p 
 						className="hidden md:block text-[#ACACAC] text-[16px] md:text-[32px] leading-[110%] -tracking-[0.02em] text-right"
 						variants={fadeInVariants}
 					>
-						We dive into your users, your product, your chaos to build clarity.<br />
+						We dive into your audience, your product, and your chaos to build clarity.<br />
 						Real design is not decoration, it&apos;s excavation.
 					</motion.p>
 					<motion.p 

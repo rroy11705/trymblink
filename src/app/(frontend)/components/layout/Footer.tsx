@@ -79,7 +79,7 @@ const Footer = () => {
 						<div className='relative hidden md:flex flex-col items-end gap-2'>
 							<div className='flex flex-row items-center justify-center gap-4'>
 								<h2 className="text-white/60 text-left">
-									Mail directly to us at
+									Reach us at
 								</h2>
 								<Link href="mailto:heya@trymblink.com" className='text-[28px]'>
 									heya@trymblink.com
@@ -130,14 +130,6 @@ const Footer = () => {
 							</Link>
 						</div>
 					</div>
-				</div>
-				<div className="">
-					<p className="text-white text-[18px]">
-						We are completely remote but...            
-					</p>
-					<p className="text-white text-[24px] font-medium -tracking-[0.01em]">
-						In case you want to locate us <Link className='underline' href="/">CLICK HERE</Link>        
-					</p>
 				</div>
 			</div>
 			<div className="py-12.5">

@@ -22,7 +22,7 @@ const HowWeWork = () => {
   const values = [
     {
       title: 'Depth\nOver Decor',
-      description: 'We don&apos;t chase trends—we chase truths. Every design decision is rooted in research, strategy, and user psychology.'
+      description: 'We don\'t chase trends—we chase truths. Every design decision is rooted in research, strategy, and user psychology.'
     },
     {
       title: 'Built\nto Scale', 
@@ -34,7 +34,7 @@ const HowWeWork = () => {
     },
     {
       title: 'Collaborate\nLike Partners',
-      description: 'We don&apos;t work for you—we work with you. Deep collaboration, sharp feedback loops, and aligned goals define every project.'
+      description: 'We don\'t work for you—we work with you. Deep collaboration, sharp feedback loops, and aligned goals define every project.'
     }
   ]
   return (
@@ -68,7 +68,7 @@ const HowWeWork = () => {
 
 			<div className="relative w-full h-full py-60 flex flex-col justify-between items-center">
 				<motion.div 
-          className='w-full max-w-200 mx-auto space-y-10'
+          className='w-full max-w-210 mx-auto space-y-10'
           variants={fadeInVariants}
         >
 					<motion.h4 
@@ -81,7 +81,7 @@ const HowWeWork = () => {
             className='text-white text-[24px] md:text-[32px] leading-[140%] -tracking-[0.02em] text-center'
             variants={textRevealVariants}
           >
-						We dive into your users, your product, your chaos to build clarity. Real design is not decoration, it&apos;s excavation.
+						We dive into your audience, your product, and your chaos to build clarity. Real design is not decoration, it&apos;s excavation.
 					</motion.p>
 				</motion.div>
 

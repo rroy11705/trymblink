@@ -213,7 +213,7 @@ const Contact = ({ pageSource = PageSource.HOME }: ContactProps) => {
 				>
 					<div className="flex flex-col gap-6 p-6 md:p-10">
 						<h3 className="text-white text-[30px] font-medium">
-							Add your project in mind?
+							Have a project in mind?
 						</h3>
 						<form onSubmit={handleSubmit} className="flex flex-col gap-4">
 							<div className="flex flex-col gap-1">

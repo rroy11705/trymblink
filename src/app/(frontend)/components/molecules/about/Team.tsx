@@ -36,7 +36,7 @@ const Team = () => {
 				<div className='absolute w-full aspect-square md:aspect-[1320/398] z-20 flex flex-col items-center justify-center gap-10'>
 					<div className='flex flex-col gap-2'>
 						<h3 className='text-white text-[20px] md:text-[46px] font-medium -tracking-[0.01em] text-center'>
-							We are completely remote but...
+							We live and work in remote but...
 						</h3>
 						<p className='text-white text-[14px] md:text-[20px] font-medium -tracking-[0.01em] text-center'>
 							In case you want to locate us

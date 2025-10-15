@@ -52,7 +52,7 @@ const Services = () => {
 							</motion.div>
 							<div className='relative z-10 p-6'>
 									<h2 className="text-white text-[32px] font-medium leading-[114%] text-left mb-6">
-										UX<br />STRATEGY
+										UX<br />Strategy
 									</h2>
 									<h2 className="text-white/50 text-[16px] text-left">
 									Research-driven experiences that solve real user problems and drive engagement.
@@ -77,7 +77,7 @@ const Services = () => {
 							</motion.div>
 							<div className='relative z-10 p-6'>
 								<h2 className="text-white text-[32px] font-medium leading-[114%] text-left mb-6">
-									User<br />interface
+									User<br />Interface
 								</h2>
 								<h2 className="text-white/50 text-[16px] text-left">
 									Pixel-perfect, intuitive interfaces designed to delight and convert every user.
@@ -101,7 +101,7 @@ const Services = () => {
 							</motion.div>
 							<div className='relative z-10 p-6'>
 								<h2 className="text-white text-[32px] font-medium leading-[114%] text-left mb-6">
-									Branding &<br />positioning
+									Branding &<br />Positioning
 								</h2>
 								<h2 className="text-white/50 text-[16px] text-left">
 									Crafting distinct brand identities that resonate, position, and build lasting trust.
@@ -128,7 +128,7 @@ const Services = () => {
 									Software<br />Development
 								</h2>
 								<h2 className="text-white/50 text-[16px] text-left">
-									Robust, scalable code that brings great design to life—fast and reliably.
+									Robust, scalable code that brings great design to life—fast and reliable.
 								</h2>
 							</div>
 						</motion.div>
@@ -228,7 +228,7 @@ const Services = () => {
 									through your funnel
 								</h2>
 								<h2 className="text-white/50 text-[16px] text-left">
-									We build interfaces that reflect your brand and make your product feel professional.
+									We build interfaces that reflect your brand value and make your product feel professional.
 								</h2>
 							</div>
 						</motion.div>
@@ -376,7 +376,7 @@ const Services = () => {
 									Real Estate
 								</h2>
 								<h2 className="text-white/50 text-[16px] text-left">
-									Robust, scalable code that brings great design to life—fast and reliably.
+									Robust, scalable code that brings great design to life—fast and reliable.
 								</h2>
 							</div>
 						</motion.div>

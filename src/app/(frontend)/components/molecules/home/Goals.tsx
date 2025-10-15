@@ -45,7 +45,7 @@ const Goals = () => {
             className="w-full text-white text-[32px] md:text-[110px] leading-[98%] font-medium text-center"
             variants={textRevealVariants}
           >
-            This is you with Us
+            This is You with Us
           </motion.h3>
         </div>
       </motion.section>

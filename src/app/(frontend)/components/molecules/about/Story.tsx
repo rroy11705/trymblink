@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { slideInLeftVariants, containerVariants, textRevealVariants } from '../../../lib/animations'
 import { useScrollAnimation } from '../../../hooks/useScrollAnimation'
 
-const StoryText = "We are TrymbLink, \n A design company founded by an architect and a sales visionary. We believe today's products, especially in SAAS, have lost touch with nature's intuitive design. "
+const StoryText = "We are TrymbLink, \n A design company founded by an industry icon, an architect and a sales visionary. We believe today's products, especially in SAAS, have lost touch with nature's intuitive design. "
 
 const Story = () => {
   const { ref, animate } = useScrollAnimation()
