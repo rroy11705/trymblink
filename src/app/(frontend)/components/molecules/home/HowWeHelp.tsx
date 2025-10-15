@@ -42,7 +42,7 @@ const HowWeHelp = () => {
             className='text-white text-[20px] md:text-[30px] leading-[140%] -tracking-[0.02em] text-left'
             variants={textRevealVariants}
           >
-						We design that solves, strategy that sticks, we held hand of businesses in every stage - from discovery to execution, from GTM to sales.
+						We build designs that solves, strategy that sticks, we held hand of businesses in every stage - from discovery to execution, from GTM to sales.
 					</motion.p>
 				</motion.div>
 				<motion.div 
