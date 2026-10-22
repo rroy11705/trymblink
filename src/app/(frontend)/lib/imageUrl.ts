@@ -1,25 +1,17 @@
 /**
- * Utility function to get image URLs from CDN in production or local in development
+ * Utility functions to get URLs for static images served from /public
  */
-
-const CDN_URL = process.env.NEXT_PUBLIC_CDN_URL || ''
 
 /**
  * Get the full URL for an image
  * @param imagePath - The path to the image (e.g., '/images/logos/trymblink.webp')
- * @returns Full URL for the image (CDN in production, local in development)
+ * @returns Root-relative URL for the image
  */
 export function getImageUrl(imagePath: string): string {
   // Remove leading slash if present for consistent concatenation
   const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath
   
-  if (CDN_URL) {
-    // Production: use CloudFront CDN
-    return `${CDN_URL}/${cleanPath}`
-  } else {
-    // Development: use local files
-    return `/${cleanPath}`
-  }
+  return `/${cleanPath}`
 }
 
 /**
