@@ -1,18 +1,26 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 
+// Token format: vercel_blob_rw_<storeId>_<secret>; BLOB_STORE_ID overrides it
+const blobStoreId = (
+  process.env.BLOB_STORE_ID || process.env.BLOB_READ_WRITE_TOKEN?.split('_')[3] || ''
+).toLowerCase()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   serverExternalPackages: ['@payloadcms/db-mongodb'],
   // Vercel Blob hosts Payload media uploads
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '*.public.blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+    // Pinned to this project's store so the optimizer can't proxy other stores
+    remotePatterns: blobStoreId
+      ? [
+          {
+            protocol: 'https',
+            hostname: `${blobStoreId}.public.blob.vercel-storage.com`,
+            port: '',
+            pathname: '/media/**',
+          },
+        ]
+      : [],
   },
   // Ensure environment variables are available at runtime
   env: {
